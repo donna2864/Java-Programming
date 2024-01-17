@@ -14,6 +14,7 @@ public class DataType {
         System.out.println("Min byte value: " + minByteValue);
 
         long myNumber = 2147483647L;
+        System.out.println(myNumber);
 
         //fractional Number
         short maxi = Short.MAX_VALUE;
@@ -24,6 +25,8 @@ public class DataType {
 
         float num = 3.14f; // for floating point you need to end the number with a 'f', else it is a double
         double number1 = 2.0;
+        System.out.println(num);
+        System.out.println(number1);
 
         // character types
         char letter = 'A'; //only one character can have only one letter stored in it.
