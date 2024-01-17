@@ -35,6 +35,5 @@ public class DataType {
         // boolean types
         boolean isActive = false;
         System.out.println(isActive);
-
     }
 }
