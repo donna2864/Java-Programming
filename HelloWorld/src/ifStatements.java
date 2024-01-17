@@ -13,7 +13,6 @@ public class ifStatements {
         else{
             System.out.println(" please come back after "+(18 - age)+" years");
         }
-
         // nested if loops
 
         int year = 2020;
