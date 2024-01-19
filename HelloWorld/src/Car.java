@@ -50,4 +50,11 @@ class Plane extends Vehicle{
         this.door = door;
         this.engines = engines;
     }
+
+    //overriding functions
+    @Override
+    public void move() {
+        super.move();
+    }
 }
+
