@@ -31,10 +31,10 @@ public class Main {
 - **Package**: Defines the directory structure where the file resides.  
 
 ## Execution Commands  
-1. **Compile**:  
+1. **Compile**: 
    ```sh
    javac Main.java
 
-2 **Run**:
+2. **Run**:
   ```sh
   java Main.java
