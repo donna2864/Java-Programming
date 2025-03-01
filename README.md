@@ -20,6 +20,7 @@ public class Main {
     System.out.println("HELLO WORLD");
   }
 }
+```
 
 ## Key Concepts  
 - **Class Name**: Must match the filename (`Main.java` → `class Main`).  
@@ -32,8 +33,8 @@ public class Main {
 ## Execution Commands  
 1. **Compile**:  
    ```sh
-   javac Main.java
+   javac Main.java ```
 
 2 **Run**:
 ```sh
-java Main.java
+java Main.java ```
