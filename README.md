@@ -33,8 +33,8 @@ public class Main {
 ## Execution Commands  
 1. **Compile**:  
    ```sh
-   javac Main.java ```
+   javac Main.java
 
 2 **Run**:
-```sh
-java Main.java ```
+  ```sh
+  java Main.java
