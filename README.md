@@ -47,6 +47,19 @@ public class InputExample {
 ```
 - `Scanner input = new Scanner(System.in);` → Reads input from the system.  
 - `input.nextInt();` → Reads an integer input.  
+- `.next()` → Takes the next word from input.  
+- `.nextLine()` → Reads the entire input line.  
+- `.nextInt()` → Reads an integer.  
+- `.nextFloat()` → Reads a float (values may not always be precise due to floating point errors).  
+- There are many more input functions available in Java, which can be explored using an IDE based on program needs.  
+
+### Example of Integer Input and Addition  
+```java
+int num1 = input.nextInt();
+int num2 = input.nextInt();
+int sum = num1 + num2;
+System.out.println("Sum: " + sum);
+```
 
 ## Primitive Data Types  
 Primitive data types are the fundamental building blocks of data in Java and cannot be broken down further:  
@@ -57,6 +70,11 @@ Primitive data types are the fundamental building blocks of data in Java and can
 - `long` → Larger integer values (e.g., `123456789L`)  
 - `boolean` → `true` or `false`  
 
+### Literals and Identifiers  
+- **Literals**: Syntactic representation of a value.  
+  - Example: `int a = 10;` Here, `10` is the **literal**, and `a` is the **identifier**.  
+- **Identifiers**: Names given to variables, classes, functions, methods, etc.  
+
 ### Wrapper Class: Integer  
 Java provides wrapper classes to add additional functionality to primitive data types.  
 Example: `Integer` is a wrapper class for `int`:  
@@ -65,25 +83,76 @@ Integer num = 10; // Integer object
 int primitiveNum = num; // Auto-unboxing (converting Integer to int)
 ```
 
-## Comments in Java  
-Comments are ignored by the compiler and help in code readability.  
-- **Single-line comment:** `// This is a comment`  
-- **Multi-line comment:**  
-  ```java
-  /*  
-     This is a  
-     multi-line comment  
-  */
-  ```  
+## Type Casting (Type Conversion)  
+When one data type is assigned to another, Java performs **automatic type conversion** if certain conditions are met:  
+1. The two types must be compatible (e.g., `int` to `float`, but not `int` to `char`).  
+2. The **destination type** must be greater than the **source type** (e.g., assigning `int` to `float` is allowed, but not vice versa).  
 
-## Execution Commands  
-1. **Compile:**  
-   ```sh
-   javac Main.java
-   ```  
-   (Generates `Main.class`)  
-2. **Run:**  
-   ```sh
-   java Main
-   ```  
-   (Executes bytecode)  
+### Explicit Type Casting  
+If automatic conversion is not possible, explicit type casting is required:  
+```java
+int a = (int)(65.25f); // Compressing a bigger number into a smaller type
+```
+
+### Automatic Type Promotion in Expressions  
+```java
+int a = 265;
+byte b = (byte)(a); // Max value is 256; result is remainder of 265/256
+```
+Example with multiple types:  
+```java
+byte b = 42;
+char c = 'a';
+short s = 100;
+int i = 5000;
+float f = 12.34f;
+double d = 0.12387;
+double result = (f * b) + (i / c) - (d - s);
+System.out.println(result);
+```
+- The result is **double** as it is the highest data type in the expression.  
+- `float + int - double = double` (follows highest type).  
+
+## Conditions and Loops  
+### If-Else Statement  
+```java
+if (condition) {
+  statement1;
+} else if (condition) {
+  statement2;
+} else {
+  statement3;
+}
+```
+
+### Loops  
+#### While Loop (Used when number of iterations is unknown)  
+```java
+init;
+while(condition) {
+  statement1;
+  increment/decrement;
+}
+```
+
+#### For Loop (Used when the number of iterations is known)  
+```java
+for(init; condition; increment/decrement) {
+  statement;
+}
+```
+
+#### Do-While Loop (Executes at least once)  
+```java
+init;
+do {
+  statement1;
+  increment/decrement;
+} while (condition);
+```
+
+## Inputting Characters in Java  
+Java does not have a direct `nextChar()` function. Instead, characters must be extracted from a string input:  
+```java
+char c = input.next().trim().charAt(0); // Reads first character, trims spaces
+```
