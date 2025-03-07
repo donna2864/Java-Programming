@@ -99,19 +99,28 @@ int a = (int)(65.25f); // Compressing a bigger number into a smaller type
 int a = 265;
 byte b = (byte)(a); // Max value is 256; result is remainder of 265/256
 ```
-Example with multiple types:  
+
+## Functions in Java  
+A function in Java has the following structure:  
 ```java
-byte b = 42;
-char c = 'a';
-short s = 100;
-int i = 5000;
-float f = 12.34f;
-double d = 0.12387;
-double result = (f * b) + (i / c) - (d - s);
-System.out.println(result);
+returnType functionName(arguments) {
+    // Function body
+    return statement; // Optional (only for non-void functions)
+}
 ```
-- The result is **double** as it is the highest data type in the expression.  
-- `float + int - double = double` (follows highest type).  
+Example:  
+```java
+public int add(int a, int b) {
+    return a + b;
+}
+```
+
+## Scoping in Java  
+Scoping defines the accessibility and lifetime of variables within a program:  
+1. **Local Scope**: Variables declared inside a function are only accessible within that function.  
+2. **Instance Scope**: Variables declared inside a class but outside any method belong to an object and are accessible throughout the object’s lifetime.  
+3. **Class Scope (Static Variables)**: Shared across all instances of the class.  
+4. **Block Scope**: Variables inside loops or conditional blocks `{}` are accessible only within those blocks.  
 
 ## Conditions and Loops  
 ### If-Else Statement  
@@ -156,3 +165,4 @@ Java does not have a direct `nextChar()` function. Instead, characters must be e
 ```java
 char c = input.next().trim().charAt(0); // Reads first character, trims spaces
 ```
+
