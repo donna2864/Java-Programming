@@ -100,6 +100,12 @@ int a = 265;
 byte b = (byte)(a); // Max value is 256; result is remainder of 265/256
 ```
 
+## Inputting Characters in Java  
+Java does not have a direct `nextChar()` function. Instead, characters must be extracted from a string input:  
+```java
+char c = input.next().trim().charAt(0); // Reads first character, trims spaces
+```
+
 ## Functions in Java  
 A function in Java has the following structure:  
 ```java
@@ -112,6 +118,30 @@ Example:
 ```java
 public int add(int a, int b) {
     return a + b;
+}
+```
+
+## Methods in Java
+
+Methods are functions inside a class that operate on objects.
+Example:
+```java
+public class Example {
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+}
+```
+
+## Variable Arguments (VarArgs)
+
+VarArgs allows a method to accept a variable number of arguments. 
+Example:
+```java
+public static void printNumbers(int... numbers) {
+    for (int num : numbers) {
+        System.out.println(num);
+    }
 }
 ```
 
@@ -160,9 +190,20 @@ do {
 } while (condition);
 ```
 
-## Inputting Characters in Java  
-Java does not have a direct `nextChar()` function. Instead, characters must be extracted from a string input:  
+## Shadowing in Java
+
+Shadowing occurs when a variable in an inner scope has the same name as a variable in an outer scope. The inner variable temporarily hides the outer variable within its scope.Example:
 ```java
-char c = input.next().trim().charAt(0); // Reads first character, trims spaces
+class ShadowingExample {
+    static int x = 10; // Outer scope variable
+    public static void main(String[] args) {
+        System.out.println("Outer x: " + x); // Prints 10
+        int x = 20; // Inner scope variable (shadows outer x)
+        System.out.println("Inner x: " + x); // Prints 20
+    }
+}
 ```
+The local `x` variable inside `main()` shadows the class-level x variable.
+
+The outer `x` is accessible only if not shadowed by a local variable with the same name.
 
