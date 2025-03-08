@@ -145,6 +145,43 @@ public static void printNumbers(int... numbers) {
 }
 ```
 
+### Function Overloading  
+
+**Function Overloading** allows multiple methods to have the same name but with different parameters.  
+
+Using **VarArgs**, we can overload methods to accept a variable number of arguments.  
+
+#### Example: Function Overloading with VarArgs  
+```java
+public class OverloadingExample {
+
+    // Method with two int parameters
+    public static void display(int a, int b) {
+        System.out.println("Two integers: " + a + ", " + b);
+    }
+
+    // Method with VarArgs to handle multiple integers
+    public static void display(int... numbers) {
+        System.out.print("VarArgs integers: ");
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        display(5, 10); // Calls the first method
+        display(1, 2, 3, 4, 5); // Calls the VarArgs method
+    }
+}
+```
+### Explanation:  
+1. The first `display` method takes exactly two integer parameters.  
+2. The second `display` method uses **VarArgs (`int... numbers`)**, allowing it to accept any number of integers.  
+3. Java determines which method to call based on the number of arguments passed:
+   - `display(5, 10);` calls the **first method**.
+   - `display(1, 2, 3, 4, 5);` calls the **VarArgs method**.
+
 ## Scoping in Java  
 Scoping defines the accessibility and lifetime of variables within a program:  
 1. **Local Scope**: Variables declared inside a function are only accessible within that function.  
