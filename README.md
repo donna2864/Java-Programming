@@ -100,6 +100,43 @@ int a = 265;
 byte b = (byte)(a); // Max value is 256; result is remainder of 265/256
 ```
 
+## Type Conversions Example
+``` java
+public class TypeConversionExample {
+    public static void main(String[] args) {
+        // Implicit (Widening) Conversion: smaller type → larger type
+        int intVal = 100;
+        double doubleVal = intVal; // int to double (automatic)
+        System.out.println("Widening Conversion (int to double): " + doubleVal);
+
+        // Explicit (Narrowing) Conversion: larger type → smaller type (requires casting)
+        double doubleNum = 99.99;
+        int intNum = (int) doubleNum; // double to int (manual cast)
+        System.out.println("Narrowing Conversion (double to int): " + intNum);
+
+        // String to Integer
+        String strNum = "123";
+        int parsedInt = Integer.parseInt(strNum);
+        System.out.println("String to int: " + parsedInt);
+
+        // Integer to String
+        int num = 456;
+        String str = Integer.toString(num);
+        System.out.println("int to String: " + str);
+
+        // Char to Int
+        char ch = 'A';
+        int charToInt = (int) ch; // ASCII value
+        System.out.println("Char to int: " + charToInt);
+
+        // Int to Char
+        int ascii = 66;
+        char intToChar = (char) ascii;
+        System.out.println("Int to Char: " + intToChar);
+    }
+}
+```
+
 ## Inputting Characters in Java  
 Java does not have a direct `nextChar()` function. Instead, characters must be extracted from a string input:  
 ```java
