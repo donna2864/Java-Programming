@@ -244,3 +244,29 @@ The local `x` variable inside `main()` shadows the class-level x variable.
 
 The outer `x` is accessible only if not shadowed by a local variable with the same name.
 
+## Arrays in Java
+
+### Why Use Arrays?
+To store a collection of data types of the same kind.
+
+### Syntax:
+datatype[ ] arrayName = new datatype[size];
+
+**Example:** Storing 4 integer values:
+``` java
+int[ ] arr = new int[4];
+```
+
+### Key Points:
+
+* All data in an array should be of the **same type**.
+
+* **Declaration**: int[ ] arr; → Array variable defined at compile time.
+
+* **Initialization**: arr = new int[4]; → Object created at runtime in heap memory. If size is not mentioned, it results in an error.
+
+* **Dynamic Memory Allocation**: Arrays are stored in heap memory, and heap objects may not be continuous as memory allocation depends on the JVM.
+
+* **Index**: The position of items in an array, used to locate or change values.
+
+* **Null**: A special value indicating a reference variable points to nothing by default.
