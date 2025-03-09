@@ -13,3 +13,4 @@
 13. Find Armstrong Numbers from 1 to N
 14. Is given year a leap year or not
 15. Print prime numbers from 1 to N
+16. Finding if given number is a pythagorean triplet
