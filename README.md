@@ -28,7 +28,22 @@ public class Main {
 - **`public`**: Accessible by all.  
 - **`static`**: Allows execution without creating an object.  
 - **`void`**: No return value.  
-- **Package**: Defines the directory structure where the file resides.  
+- **Package**: Defines the directory structure where the file resides.
+
+## Stack memory V/s Heap Memory
+**Stack Memory:**
+- Stores local variables and function calls
+- Fixed size, LIFO order
+- Only accessible by one thread
+- Short-lived
+- Fast and efficient
+
+**Heap Memory:**
+- Stores objects and class instances
+- Dynamic allocation, flexible allocation and deallocation
+- Globally accessible by all threads
+- Long-lived
+- Slower and less efficient
 
 ## Taking Input in Java  
 Java provides the `Scanner` class (from `java.util` package) to take user input.  
