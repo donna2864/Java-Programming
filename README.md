@@ -299,26 +299,142 @@ The outer `x` is accessible only if not shadowed by a local variable with the sa
 ## Arrays in Java
 
 ### Why Use Arrays?
+
 To store a collection of data types of the same kind.
 
-### Syntax:
-datatype[ ] arrayName = new datatype[size];
+#### Syntax:
+```java
 
-**Example:** Storing 4 integer values:
-``` java
-int[ ] arr = new int[4];
+datatype[] arrayName = new datatype[size];
+```
+
+Example: Storing 4 integer values:
+
+```java
+int[] arr = new int[4];
 ```
 
 ### Key Points:
 
-* All data in an array should be of the **same type**.
+All data in an array should be of the same type.
 
-* **Declaration**: int[ ] arr; → Array variable defined at compile time.
+- **Declaration:** int[] arr; → Array variable defined at compile time.
 
-* **Initialization**: arr = new int[4]; → Object created at runtime in heap memory. If size is not mentioned, it results in an error.
+- **Initialization:** arr = new int[4]; → Object created at runtime in heap memory. If size is not mentioned, it results in an error.
 
-* **Dynamic Memory Allocation**: Arrays are stored in heap memory, and heap objects may not be continuous as memory allocation depends on the JVM.
+- **Dynamic Memory Allocation:** Arrays are stored in heap memory, and heap objects may not be continuous as memory allocation depends on the JVM.
 
-* **Index**: The position of items in an array, used to locate or change values.
+- **Index:** The position of items in an array, used to locate or change values.
 
-* **Null**: A special value indicating a reference variable points to nothing by default.
+- **Null:** A special value indicating a reference variable points to nothing by default.
+
+- If values are not provided to the array, by default it stores [0,0,...,0] for the size of the array.
+
+- Primitive data types are stored in stack, all other objects are stored in heap memory.
+
+- `Arrays.toString(array)` → Internally uses a for loop and gives the output in the proper format.
+
+- Arrays are mutable since the objects can be changed.
+
+### Iterating Through an Array:
+
+#### Using a for loop:
+```java
+for(int i=0; i<arr.length; i++){
+    System.out.println(arr[i]);
+}
+```
+Using a for-each loop:
+```java
+for(int element : arr){
+    System.out.println(element);
+}
+```
+### 2D Arrays:
+
+#### Syntax:
+``` java
+int[][] arr = new int[#rows][#columns];
+```
+- It is mandatory to give the size of the rows but not mandatory to give the size of columns.
+- A 2D array is stored as an array of arrays in heap memory.
+- The size of the individual arrays can vary since each array is a different object.
+
+**Example:**
+```java
+int[][] arr = { {1,0,0}, {0,1,0}, {0,0,1} };
+System.out.println(arr[1][2]); // Output: 0
+```
+Taking Input in a 2D Array:
+```java 
+for (int row=0; row<arr.length; row++){
+    for(int col=0; col<arr[row].length; col++){
+        arr[row][col] = in.nextInt();
+    }
+}
+```
+
+**Printing a 2D Array:**
+``` java
+for (int row=0; row<arr.length; row++){
+    System.out.println(Arrays.toString(arr[row]));
+}
+
+for(int[] a: arr){
+    System.out.println(Arrays.toString(a));
+} // Each element in this array is another array
+```
+
+### ArrayList in Java
+ArrayList is part of the Collection Framework and is present in java.util package. It provides dynamic arrays in Java. It is slower than standard arrays but is useful when the size is unknown.
+
+#### Syntax:
+```java
+ArrayList<Integer> list = new ArrayList<>();
+```
+#### Why Use ArrayList?
+- If array size is not known.
+- Provides dynamic resizing.
+
+### Operations on ArrayList:
+```java
+list.add(value); // Adds an element
+list.set(index, new_value); // Modifies an element
+list.remove(index); // Removes an element
+```
+#### Iterating Through an ArrayList:
+```java
+for(int i=0; i<5; i++){
+    list.add(in.nextInt());
+    System.out.println(list.get(i));
+}
+```
+#### How It Works Internally:
+
+- The initial size is fixed internally.
+- When more elements are added, a new larger array is created (almost double the original size).
+- Old elements are copied to the new array.
+- Old array is deleted.
+
+### Multiple ArrayLists:
+
+```java
+ArrayList<ArrayList<Integer>> list = new ArrayList<>(); ```
+
+**Initialization:**
+```java 
+for(int i =0; i<3; i++){
+    list.add(new ArrayList<>());
+}
+```
+
+Adding Elements:
+```java
+for (int i=0; i<3; i++){
+    for(int j=0; j<3; j++){
+        list.get(i).add(in.nextInt());
+    }
+}
+System.out.println(list);
+
+```
