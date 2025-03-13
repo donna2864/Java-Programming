@@ -1,3 +1,4 @@
+## Basic Problems
 1. Discount calculator
 2. Average of a given Input
 3. Given number is prime or not
@@ -14,3 +15,10 @@
 14. Is given year a leap year or not
 15. Print prime numbers from 1 to N
 16. Finding if given number is a pythagorean triplet
+
+## Array Problems:
+1. Build Array from Permutation
+2. Concatenation of Array
+3. Running Sum of 1d Array
+4. Richest Customer Wealth
+5. Maximum count of positive and negative numbers
