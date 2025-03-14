@@ -22,3 +22,9 @@
 3. Running Sum of 1d Array
 4. Richest Customer Wealth
 5. Maximum count of positive and negative numbers
+6. Shuffle the Array
+7. Kids With the Greatest Number of Candies
+8. Number of Good Pairs
+9. How Many Numbers Are Smaller Than the Current Number
+10. Create Target Array in the Given Order
+11. Check if the Sentence Is Pangram
