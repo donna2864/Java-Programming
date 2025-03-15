@@ -27,4 +27,5 @@
 8. Number of Good Pairs
 9. How Many Numbers Are Smaller Than the Current Number
 10. Create Target Array in the Given Order
-11. Check if the Sentence Is Pangram
+11. Count Items Matching a Rule
+12. Check if the Sentence Is Pangram
