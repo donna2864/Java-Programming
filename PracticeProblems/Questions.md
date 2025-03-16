@@ -29,3 +29,5 @@
 10. Create Target Array in the Given Order
 11. Count Items Matching a Rule
 12. Check if the Sentence Is Pangram
+13. Find the Highest Altitude
+14. Flipping an Image
