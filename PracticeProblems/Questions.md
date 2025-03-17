@@ -31,3 +31,5 @@
 12. Check if the Sentence Is Pangram
 13. Find the Highest Altitude
 14. Flipping an Image
+15. Cells with Odd Values in a Matrix
+16. Divide Array Into Equal Pairs
