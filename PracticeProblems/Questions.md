@@ -33,3 +33,4 @@
 14. Flipping an Image
 15. Cells with Odd Values in a Matrix
 16. Divide Array Into Equal Pairs
+17. Matrix Diagonal Sum
